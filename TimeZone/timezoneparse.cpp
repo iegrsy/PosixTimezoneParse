@@ -90,7 +90,7 @@ void TimeZoneParse::setTzName()
 
 	for(int i = 0; i < zones.count(); i++){
 		if (noDST){
-			QString az = zones.at(i).at(10);
+			QString az = zones.at(i).at(5);
 			QString os = QString::number(stdOffsetMS / ( 60*60*1000));
 			if( zones.at(i).at(1).compare(stdName) == 0 )
 				if(az.contains(os)){ //FIXME: time zone
@@ -101,7 +101,7 @@ void TimeZoneParse::setTzName()
 			if( zones.at(i).at(1).compare(stdName) == 0 && zones.at(i).at(3).compare(dstName) == 0){
 				QStringList st = zones.at(i).at(7).split(";");
 				QStringList et = zones.at(i).at(9).split(";");
-				QString az = zones.at(i).at(10);
+				QString az = zones.at(i).at(5);
 				QString os = QString::number(stdOffsetMS / ( 60*60*1000));
 				if ( !(st.count() == 3 && et.count() == 3) )
 					return;
