@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>TimeZone/date_time_zonespec.csv</file>
+        <file>TimeZone/timezonesdb.csv</file>
     </qresource>
 </RCC>
